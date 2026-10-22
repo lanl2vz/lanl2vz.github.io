@@ -3,8 +3,7 @@
 A small academic notebook with Iosevka Nerd Font Mono, Markdown, LaTeX equations,
 images, and downloadable PDFs. Published at <https://lanl2vz.github.io/>.
 
-The initial entries are marked **example**. The older files under `notes/` and
-`resource/` are preserved.
+The older files under `notes/` and `resource/` are preserved.
 
 ## Add or edit a note
 
