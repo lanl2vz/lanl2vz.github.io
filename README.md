@@ -52,21 +52,14 @@ rebuilt `index.html`, then push to `main`. GitHub Pages publishes the repository
 root using its existing configuration. The `_notebook/` source directory is
 excluded by Jekyll's default underscore-directory rule.
 
-## Local editor
+## Authoring and privacy
 
-**Write a note** opens a browser-only editor with a live preview and image/PDF
-attachments. **Save on this device** stores one draft in that browser's
-IndexedDB. **Download .md** exports a portable Markdown copy with attached data
-embedded as data URLs. Saving does not publish or synchronize the draft.
-
-To publish an exported draft, add the front matter above and save it under
-`_notebook/notes/`. Move attachments to `_notebook/assets/` and use their relative
-links before building. The browser editor has no GitHub login, access token,
-upload service, or account permissions.
+The public website is for reading. Write and edit Markdown files locally, then
+build and publish them using the steps above. There is no browser editor,
+draft storage access, GitHub login, access token, or upload service in the site.
 
 All files committed to this repository are public. Keep private drafts outside
-the checkout. Browser storage is not encrypted storage or a backup; download
-important drafts before clearing browser data or changing devices.
+the checkout.
 
 ## Implementation
 
@@ -78,7 +71,7 @@ important drafts before clearing browser data or changing devices.
 
 The website embeds its dependencies and assets locally. It makes no analytics,
 font-service, or GitHub API requests. Markdown HTML is escaped, rendered content
-is sanitized with DOMPurify, and KaTeX's trusted commands are disabled. Pasted
+is sanitized with DOMPurify, and KaTeX's trusted commands are disabled. Embedded
 remote images are not loaded automatically. Ordinary external text links only
 navigate when opened by the reader.
 
